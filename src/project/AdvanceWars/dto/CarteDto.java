@@ -24,7 +24,7 @@ public class CarteDto {
 			for (int j = 0; j < 10; j++) {
 				str = str + " " + this.getTerrains().toString();
 			}
-			str = str + "\n\n";
+			str = str + "\n\n\n\n";
 		}
 
 		return str;
