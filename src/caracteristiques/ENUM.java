@@ -1,0 +1,16 @@
+package caracteristiques;
+
+public class ENUM {
+
+	public enum ListeTerrains {
+		PLAINE, FORET, MONTAGNE, ROUTE, PONT, RIVIERE, MER, RECIF, PLAGE, VILLE, QG, BASE, PORT, AEROPORT;
+	};
+
+	public enum TypeDeplacement {
+		INF, INFLOURDE, ROUES, CHAR, AIR, NAVIRE, TRANSPORT, SUB;
+	};
+
+	public enum ListeUnites {
+		INFANTERIE, BAZOOKA, TANK, TANKM, VTB, DCA, ARTILLERIE, LMISS, AAIR, RECON, HELICO, HELICOTRANSPORT, CHASSEUR, BOMBARDIER, BARGE, CROISEUR, SOUSMARIN, DESTROYER;
+	};
+}
