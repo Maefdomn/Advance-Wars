@@ -1,4 +1,5 @@
 package project.AdvanceWars.dto;
+import project.AdvanceWars.dto.terrains.Terrain;
 
 public class CarteDto {
 
