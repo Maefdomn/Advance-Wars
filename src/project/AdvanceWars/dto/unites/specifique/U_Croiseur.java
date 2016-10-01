@@ -6,7 +6,7 @@ import project.AdvanceWars.enumValues.TypeUnite;
 
 public class U_Croiseur extends UniteContactDto {
 
-	public U_Croiseur(int X, int Y) {
+	public U_Croiseur() {
 		setPv(10);
 		setDefense(3);
 		setDeplacement(4);
