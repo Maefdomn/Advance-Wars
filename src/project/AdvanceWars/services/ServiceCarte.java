@@ -22,11 +22,11 @@ public class ServiceCarte implements IServiceCarte {
 		carte.setTerrains(terrains);
 	}
 
-	public void setTerrain(Integer x, Integer y, TerrainDto terrain,
-			CarteDto carte) {
+	public void setTerrain(Integer x, Integer y, TerrainDto terrain, CarteDto carte) {
 		carte.setTerrain(x, y, terrain);
 	}
 
+	@Override
 	public CarteDto createDefaultCarte() {
 		CarteDto carteDto = new CarteDto();
 		carteDto.setTerrains(new TerrainDto[10][15]);
@@ -44,5 +44,4 @@ public class ServiceCarte implements IServiceCarte {
 		}
 		return carteDto;
 	}
-
 }
