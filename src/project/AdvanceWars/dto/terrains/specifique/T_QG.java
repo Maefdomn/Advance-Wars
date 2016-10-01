@@ -1,9 +1,9 @@
 package project.AdvanceWars.dto.terrains.specifique;
 
-import project.AdvanceWars.dto.terrains.Batiment;
+import project.AdvanceWars.dto.terrains.BatimentDto;
 import project.AdvanceWars.enumValues.TypeTerrain;
 
-public class T_QG extends Batiment {
+public class T_QG extends BatimentDto {
 
 	public T_QG() {
 		setDefense(0);
