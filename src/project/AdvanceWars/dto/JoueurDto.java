@@ -2,7 +2,7 @@ package project.AdvanceWars.dto;
 
 import java.util.ArrayList;
 
-import project.AdvanceWars.dto.terrains.Batiment;
+import project.AdvanceWars.dto.terrains.BatimentDto;
 import project.AdvanceWars.dto.unites.UniteDto;
 import project.AdvanceWars.enumValues.TypeCouleur;
 import project.AdvanceWars.enumValues.TypeGeneral;
@@ -14,7 +14,7 @@ public class JoueurDto {
 	private int argent;
 	private int jaugePouvoir;
 	private ArrayList<UniteDto> listeUnites;
-	private ArrayList<Batiment> listeBatiments;
+	private ArrayList<BatimentDto> listeBatiments;
 
 	public JoueurDto() { // provisoire (pour tests)
 		setCouleur(TypeCouleur.ROUGE);
@@ -22,7 +22,7 @@ public class JoueurDto {
 		setJaugePouvoir(0);
 		setArgent(0);
 		setListeUnites(new ArrayList<UniteDto>());
-		setListeBatiments(new ArrayList<Batiment>());
+		setListeBatiments(new ArrayList<BatimentDto>());
 	}
 
 	public TypeCouleur getCouleur() {
@@ -65,14 +65,12 @@ public class JoueurDto {
 		this.listeUnites = listeUnites;
 	}
 
-	public ArrayList<Batiment> getListeBatiments() {
+	public ArrayList<BatimentDto> getListeBatiments() {
 		return listeBatiments;
 	}
 
-	public void setListeBatiments(ArrayList<Batiment> listeBatiments) {
+	public void setListeBatiments(ArrayList<BatimentDto> listeBatiments) {
 		this.listeBatiments = listeBatiments;
 	}
-	
-	
 
 }
