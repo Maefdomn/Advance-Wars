@@ -3,9 +3,9 @@ package project.AdvanceWars.services;
 import project.AdvanceWars.dto.unites.UniteDto;
 import project.AdvanceWars.enumValues.TypeDeplacement;
 import project.AdvanceWars.enumValues.TypeUnite;
-import project.AdvanceWars.services.interfaces.IUniteService;
+import project.AdvanceWars.services.interfaces.IServiceUnite;
 
-public class UniteService implements IUniteService {
+public class ServiceUnite implements IServiceUnite {
 
 	@Override
 	public UniteDto createUnite(Integer x, Integer y, TypeUnite unitType) {

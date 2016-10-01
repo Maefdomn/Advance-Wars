@@ -9,6 +9,10 @@ public class CarteDto {
 	public CarteDto() {
 	}
 
+	public CarteDto(TerrainDto[][] terrains) {
+		this.terrains = terrains;
+	}
+
 	public TerrainDto[][] getTerrains() {
 		return terrains;
 	}
@@ -17,7 +21,10 @@ public class CarteDto {
 		this.terrains = terrains;
 	}
 
-	@Override
+	public void setTerrain(Integer x, Integer y, TerrainDto terrain) {
+		this.getTerrains()[x][y] = terrain;
+	}
+
 	public String toString() {
 		String str = "";
 		for (int i = 0; i < 10; i++) {

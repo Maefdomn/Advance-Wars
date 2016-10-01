@@ -2,9 +2,9 @@ package project.AdvanceWars.services;
 
 import project.AdvanceWars.dto.terrains.TerrainDto;
 import project.AdvanceWars.enumValues.TypeTerrain;
-import project.AdvanceWars.services.interfaces.ITerrainService;
+import project.AdvanceWars.services.interfaces.IServiceTerrain;
 
-public class TerrainService implements ITerrainService {
+public class ServiceTerrain implements IServiceTerrain {
 
 	@Override
 	public TerrainDto createTerrain(TypeTerrain terrain) {

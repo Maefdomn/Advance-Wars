@@ -10,12 +10,23 @@ import project.AdvanceWars.services.interfaces.IServiceCarte;
 
 public class ServiceCarte implements IServiceCarte {
 
-	@Override
+	public TerrainDto[][] getTerrains(CarteDto carte) {
+		return carte.getTerrains();
+	}
+
 	public TerrainDto getTerrain(Integer x, Integer y, CarteDto carte) {
 		return carte.getTerrains()[x][y];
 	}
 
-	@Override
+	public void setTerrains(TerrainDto[][] terrains, CarteDto carte) {
+		carte.setTerrains(terrains);
+	}
+
+	public void setTerrain(Integer x, Integer y, TerrainDto terrain,
+			CarteDto carte) {
+		carte.setTerrain(x, y, terrain);
+	}
+
 	public CarteDto createDefaultCarte() {
 		CarteDto carteDto = new CarteDto();
 		carteDto.setTerrains(new TerrainDto[10][15]);
