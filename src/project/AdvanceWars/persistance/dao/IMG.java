@@ -1,4 +1,4 @@
-package project.AdvanceWars.controlleurs;
+package project.AdvanceWars.persistance.dao;
 
 import java.io.File;
 import javax.swing.ImageIcon;

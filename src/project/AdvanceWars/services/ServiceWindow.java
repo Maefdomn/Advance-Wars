@@ -7,9 +7,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import project.AdvanceWars.controlleurs.IMG;
 import project.AdvanceWars.controlleurs.MainWindowGame;
 import project.AdvanceWars.dto.CarteDto;
+import project.AdvanceWars.persistance.dao.IMG;
 import project.AdvanceWars.services.interfaces.IServiceWindow;
 
 public class ServiceWindow implements IServiceWindow {
