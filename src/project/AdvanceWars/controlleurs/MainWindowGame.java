@@ -1,33 +1,48 @@
 package project.AdvanceWars.controlleurs;
 
-import java.awt.*;
+import java.awt.BorderLayout;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
-import project.AdvanceWars.dto.CarteDto;
 import project.AdvanceWars.dto.PartieDto;
+import project.AdvanceWars.services.ServiceCarte;
+import project.AdvanceWars.services.ServiceJoueur;
+import project.AdvanceWars.services.ServiceWindow;
+import project.AdvanceWars.services.interfaces.IServiceCarte;
+import project.AdvanceWars.services.interfaces.IServiceJoueur;
+import project.AdvanceWars.services.interfaces.IServiceWindow;
 
 public class MainWindowGame extends JFrame {
 	private static final long serialVersionUID = 1L;
 
+	public final IServiceWindow serviceWindow = new ServiceWindow();
+
+	public final IServiceJoueur serviceJoueur = new ServiceJoueur();
+
+	public final IServiceCarte serviceCarte = new ServiceCarte();
+
 	private PartieDto partie;
 	private JButton[][] casesButton;
 
-	public MainWindowGame(PartieDto partie) {
-		super("Advance Wars");
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setVisible(true);
-		this.getContentPane().setLayout(new BorderLayout());
-		this.setResizable(false);
+	public MainWindowGame() {
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(Boolean.TRUE);
+		getContentPane().setLayout(new BorderLayout());
+		setResizable(Boolean.FALSE);
 
-		this.setPartie(partie);
-		this.setCasesButton(new JButton[10][15]);
+		final PartieDto partie = new PartieDto();
+		partie.setJoueurs(serviceJoueur.createFourDefaultPlayers());
+		partie.setCarte(serviceCarte.createDefaultCarte());
 
-		this.createCasesPanel(this.getPartie().getCarte());
-		this.createPanelJoueur();
-		this.createPanelInfosCurseur();
+		setPartie(partie);
+		setCasesButton(new JButton[10][15]);
 
-		this.pack();
+		serviceWindow.createCasesPanelDefault(getPartie().getCarte(), this);
+		serviceWindow.createPanelJoueur();
+		serviceWindow.createPanelInfosCurseur();
+
+		pack();
 	}
 
 	public PartieDto getPartie() {
@@ -45,68 +60,4 @@ public class MainWindowGame extends JFrame {
 	public void setCasesButton(JButton[][] cases) {
 		this.casesButton = cases;
 	}
-
-	public void setCasesButtonij(int i, int j, JButton cases) {
-		this.casesButton[i][j] = cases;
-	}
-
-	public void createCasesPanel(CarteDto carte) {
-		JPanel cartePanel = new JPanel();
-		cartePanel.setLayout(new GridLayout(10, 15));
-		ImageIcon[][] casesImg = new ImageIcon[19][19];
-
-		/* Creation de la matrice d'image "casesImg" */
-		// Mers en bas a gauche
-		for (int i = 5; i < 10; i++) {
-			for (int j = 0; j < 7; j++)
-				casesImg[i][j] = IMG.IMG_MER;
-		}
-		// Forets en haut a droite
-		for (int i = 0; i < 5; i++) {
-			for (int j = 7; j < 15; j++)
-				casesImg[i][j] = IMG.IMG_FORET;
-		}
-		// Plaine pour le reste
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 7; j++)
-				casesImg[i][j] = IMG.IMG_PLAINE;
-		}
-		for (int i = 5; i < 10; i++) {
-			for (int j = 7; j < 15; j++)
-				casesImg[i][j] = IMG.IMG_PLAINE;
-		}
-
-		/* Initialisation des boutons */
-		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 15; j++) {
-				this.setCasesButtonij(i, j, new JButton());
-				this.getCasesButton()[i][j].setBorder(null);
-				this.getCasesButton()[i][j].setIcon(casesImg[i][j]);
-				this.getCasesButton()[i][j].addActionListener(null);
-			}
-		}
-
-		// Creation de l'interface de la carte
-
-		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 15; j++) {
-				cartePanel.add(this.getCasesButton()[i][j]);
-			}
-		}
-
-
-
-		this.getContentPane().add(cartePanel, BorderLayout.CENTER);
-	}
-
-	public void createPanelJoueur() {
-	}
-
-	public void createPanelInfosCurseur() {
-	}
-
-	public static void main(String[] args) {
-		new MainWindowGame(new PartieDto());
-	}
-
 }

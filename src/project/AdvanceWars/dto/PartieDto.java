@@ -10,11 +10,6 @@ public class PartieDto extends Observable {
 	public PartieDto() {
 	}
 
-	public PartieDto(CarteDto carte, JoueurDto[] joueurs) {
-		setCarte(carte);
-		setJoueurs(joueurs);
-	}
-
 	public CarteDto getCarte() {
 		return carte;
 	}
@@ -24,16 +19,10 @@ public class PartieDto extends Observable {
 	}
 
 	public JoueurDto[] getJoueurs() {
-		return this.joueurs;
+		return joueurs;
 	}
 
 	public void setJoueurs(JoueurDto[] joueurs) {
 		this.joueurs = joueurs;
-	}
-
-	public void setJoueurs(JoueurDto j1, JoueurDto j2, JoueurDto j3, JoueurDto j4) {
-		setJoueurs(new JoueurDto[4]);
-		for (int i = 0; i < 4; i++)
-			this.joueurs[0] = j1;
 	}
 }
