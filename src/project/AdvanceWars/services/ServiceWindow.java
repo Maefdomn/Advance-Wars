@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 
 import project.AdvanceWars.controlleurs.MainWindowGame;
 import project.AdvanceWars.dto.CarteDto;
+import project.AdvanceWars.dto.unites.UniteDto;
 import project.AdvanceWars.persistance.dao.IMG;
 import project.AdvanceWars.services.interfaces.IServiceWindow;
 
@@ -81,4 +82,7 @@ public class ServiceWindow implements IServiceWindow {
 	public void createPanelInfosCurseur() {
 	}
 
+	public void affichageZoneDeplacement(UniteDto unite) {
+		
+	}
 }
