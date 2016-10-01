@@ -15,31 +15,40 @@ import project.AdvanceWars.services.interfaces.IServiceWindow;
 public class ServiceWindow implements IServiceWindow {
 
 	@Override
-	public void createCasesPanelDefault(CarteDto carte, MainWindowGame mainWindowGame) {
+	public void createCasesPanelDefault(CarteDto carte,
+			MainWindowGame mainWindowGame) {
 		final JPanel cartePanel = new JPanel();
 		final GridLayout gridLayout = new GridLayout(10, 15);
 		cartePanel.setLayout(gridLayout);
 		final ImageIcon[][] casesImg = new ImageIcon[19][19];
 
 		/* Creation de la matrice d'image "casesImg" */
-		// Mers en bas a gauche
-		for (int i = 5; i < 10; i++) {
+		// Vert et Violet
+		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 7; j++)
+				casesImg[i][j] = IMG.IMG_FORET;
+			for (int j = 7; j < 15; j++)
+				casesImg[i][j] = IMG.IMG_QG;
+		}
+		// Bleu
+		for (int i = 1; i < 10; i++) {
+			for (int j = 5; j < 10; j++)
 				casesImg[i][j] = IMG.IMG_MER;
 		}
-		// Forets en haut a droite
-		for (int i = 0; i < 5; i++) {
-			for (int j = 7; j < 15; j++)
-				casesImg[i][j] = IMG.IMG_FORET;
+		for (int j = 2; j < 13; j++) {
+			for (int i = 6; i < 10; i++)
+				casesImg[i][j] = IMG.IMG_MER;
 		}
-		// Plaine pour le reste
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 7; j++)
-				casesImg[i][j] = IMG.IMG_PLAINE;
+		// Orange
+		for (int j = 6; j < 9; j++) {
+			for (int i = 2; i < 9; i++)
+				casesImg[i][j] = IMG.IMG_VILLE;
 		}
-		for (int i = 5; i < 10; i++) {
-			for (int j = 7; j < 15; j++)
-				casesImg[i][j] = IMG.IMG_PLAINE;
+		for (int i = 7; i < 9; i++) {
+			for (int j = 3; j < 5; j++)
+				casesImg[i][j] = IMG.IMG_VILLE;
+			for (int j = 10; j < 12; j++)
+				casesImg[i][j] = IMG.IMG_VILLE;
 		}
 
 		/* Initialisation des boutons */
