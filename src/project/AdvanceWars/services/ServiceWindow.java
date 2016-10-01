@@ -14,9 +14,10 @@ import project.AdvanceWars.services.interfaces.IServiceWindow;
 
 public class ServiceWindow implements IServiceWindow {
 
+	public final IMG img = new IMG();
+
 	@Override
-	public void createCasesPanelDefault(CarteDto carte,
-			MainWindowGame mainWindowGame) {
+	public void createCasesPanelDefault(CarteDto carte, MainWindowGame mainWindowGame) {
 		final JPanel cartePanel = new JPanel();
 		final GridLayout gridLayout = new GridLayout(10, 15);
 		cartePanel.setLayout(gridLayout);
@@ -26,29 +27,29 @@ public class ServiceWindow implements IServiceWindow {
 		// Vert et Violet
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 7; j++)
-				casesImg[i][j] = IMG.IMG_FORET;
+				casesImg[i][j] = img.getForetImage();
 			for (int j = 7; j < 15; j++)
-				casesImg[i][j] = IMG.IMG_QG;
+				casesImg[i][j] = img.getQGImage();
 		}
 		// Bleu
 		for (int i = 1; i < 10; i++) {
 			for (int j = 5; j < 10; j++)
-				casesImg[i][j] = IMG.IMG_MER;
+				casesImg[i][j] = img.getMerImage();
 		}
 		for (int j = 2; j < 13; j++) {
 			for (int i = 6; i < 10; i++)
-				casesImg[i][j] = IMG.IMG_MER;
+				casesImg[i][j] = img.getMerImage();
 		}
 		// Orange
 		for (int j = 6; j < 9; j++) {
 			for (int i = 2; i < 9; i++)
-				casesImg[i][j] = IMG.IMG_VILLE;
+				casesImg[i][j] = img.getVilleImage();
 		}
 		for (int i = 7; i < 9; i++) {
 			for (int j = 3; j < 5; j++)
-				casesImg[i][j] = IMG.IMG_VILLE;
+				casesImg[i][j] = img.getVilleImage();
 			for (int j = 10; j < 12; j++)
-				casesImg[i][j] = IMG.IMG_VILLE;
+				casesImg[i][j] = img.getVilleImage();
 		}
 
 		/* Initialisation des boutons */
