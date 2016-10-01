@@ -60,8 +60,4 @@ public class MainWindowGame extends JFrame {
 	public void setCasesButton(JButton[][] cases) {
 		this.casesButton = cases;
 	}
-	
-	public static void main(String[] args) {
-		new MainWindowGame();
-	}
 }
