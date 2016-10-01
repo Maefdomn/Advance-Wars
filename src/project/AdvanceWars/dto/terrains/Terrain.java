@@ -27,7 +27,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Plaine verdoyante. Facile à traverser, mais offrant peu de couverture.");
+			this.setDescription("Plaine verdoyante. Facile a traverser, mais offrant peu de couverture.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.FORET) {
 			this.setDefense(2);
@@ -39,7 +39,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("En brouillard, les unités ne sont vues que par des troupes proches ou volantes.");
+			this.setDescription("En brouillard, les unites ne sont vues que par des troupes proches ou volantes.");
 			this.setCamouflage(true);
 		} else if (terrain == ListeTerrains.MONTAGNE) {
 			this.setDefense(4);
@@ -51,7 +51,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Montagne abrupte. L'infanterie gagne 3 points à son champ de vision.");
+			this.setDescription("Montagne abrupte. L'infanterie gagne 3 points a son champ de vision.");
 			this.setCamouflage(true);
 		} else if (terrain == ListeTerrains.ROUTE) {
 			this.setDefense(0);
@@ -63,7 +63,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Une route en bitume. Facile à traverser, mais n'offrant aucune couverture.");
+			this.setDescription("Une route en bitume. Facile a traverser, mais n'offrant aucune couverture.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.PONT) {
 			this.setDefense(0);
@@ -75,7 +75,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Un pont permet aux unités de traverser un fleuve. Pas de bonus.");
+			this.setDescription("Un pont permet aux unites de traverser un fleuve. Pas de bonus.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.RIVIERE) {
 			this.setDefense(0);
@@ -87,7 +87,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Une rivière au faible courant. Seule l'infanterie peut la traverser.");
+			this.setDescription("Une riviere au faible courant. Seule l'infanterie peut la traverser.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.PLAGE) {
 			this.setDefense(0);
@@ -99,7 +99,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(1);
 			this.setMvtSub(20);
-			this.setDescription("Rivage sablonneux. La Barge permet d'y décharger et charger des unités.");
+			this.setDescription("Rivage sablonneux. La Barge permet d'y decharger et charger des unites.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.MER) {
 			this.setDefense(0);
@@ -111,7 +111,7 @@ public class Terrain {
 			this.setMvtNavire(1);
 			this.setMvtTransport(1);
 			this.setMvtSub(1);
-			this.setDescription("Une étendue d'eau. Seule une unité aérienne ou maritime peut la traverser.");
+			this.setDescription("Une etendue d'eau. Seule une unite aerienne ou maritime peut la traverser.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.RECIF) {
 			this.setDefense(1);
@@ -123,7 +123,7 @@ public class Terrain {
 			this.setMvtNavire(2);
 			this.setMvtTransport(2);
 			this.setMvtSub(2);
-			this.setDescription("En brouillard, les unités ne sont vues que par des troupes proches ou volantes.");
+			this.setDescription("En brouillard, les unites ne sont vues que par des troupes proches ou volantes.");
 			this.setCamouflage(true);
 		} else if (terrain == ListeTerrains.VILLE) {
 			this.setDefense(0);
@@ -135,7 +135,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Les unités au sol sont approvisionnées et soignées dans les villes alliées.");
+			this.setDescription("Les unites au sol sont approvisionnees et soignees dans les villes alliees.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.QG) {
 			this.setDefense(0);
@@ -147,7 +147,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Un Q.G. La bataille est finie s'il est capturé. Rend des PV aux troupes.");
+			this.setDescription("Un Q.G. La bataille est finie s'il est capture. Rend des PV aux troupes.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.BASE) {
 			this.setDefense(0);
@@ -159,7 +159,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Une base maritime qui peut créer des unités terrestres et leur rendre des PV.");
+			this.setDescription("Une base terrestre qui peut creer des unites terrestres et leur rendre des PV.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.PORT) {
 			this.setDefense(0);
@@ -171,7 +171,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Une base maritime qui peut créer des unités navales et leur rendre des PV.");
+			this.setDescription("Une base maritime qui peut creer des unites navales et leur rendre des PV.");
 			this.setCamouflage(false);
 		} else if (terrain == ListeTerrains.AEROPORT) {
 			this.setDefense(0);
@@ -183,7 +183,7 @@ public class Terrain {
 			this.setMvtNavire(20);
 			this.setMvtTransport(20);
 			this.setMvtSub(20);
-			this.setDescription("Une base maritime qui peut créer des unités aériennes et leur rendre des PV.");
+			this.setDescription("Une base aerienne qui peut creer des unites aeriennes et leur rendre des PV.");
 			this.setCamouflage(false);
 		}
 	}

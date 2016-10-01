@@ -1,7 +1,7 @@
 package project.AdvanceWars.dto.unites.specifique;
 
-import project.AdvanceWars.dto.unites.UniteContactDto;
 import project.AdvanceWars.enumValues.ListeUnites;
+import project.AdvanceWars.dto.unites.UniteContactDto;
 
 public class U_Infanterie extends UniteContactDto {
 

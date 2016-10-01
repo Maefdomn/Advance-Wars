@@ -1,7 +1,7 @@
 package project.AdvanceWars.dto.unites.specifique;
 
-import project.AdvanceWars.dto.unites.UniteDistanceDto;
 import project.AdvanceWars.enumValues.ListeUnites;
+import project.AdvanceWars.dto.unites.UniteDistanceDto;
 
 public class U_AAir extends UniteDistanceDto {
 
@@ -9,4 +9,7 @@ public class U_AAir extends UniteDistanceDto {
 		super(X, Y, ListeUnites.AAIR);
 	}
 
+	public String toString() {
+		return "A-air";
+	}
 }
