@@ -6,8 +6,7 @@ public class TypeDeplacement {
 
 	private ListeDeplacements typeDep;
 
-	public TypeDeplacement(ListeDeplacements typeDep) {
-		this.setTypeDeplacement(typeDep);
+	public TypeDeplacement() {
 	}
 
 	public ListeDeplacements getTypeDeplacement() {

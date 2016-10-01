@@ -17,183 +17,187 @@ public class Terrain {
 	private boolean camouflage;
 
 	public Terrain(ListeTerrains terrain) {
-		if (terrain == ListeTerrains.PLAINE) {
-			this.setDefense(1);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(2);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Plaine verdoyante. Facile a traverser, mais offrant peu de couverture.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.FORET) {
-			this.setDefense(2);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(3);
-			this.setMvtChar(2);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("En brouillard, les unites ne sont vues que par des troupes proches ou volantes.");
-			this.setCamouflage(true);
-		} else if (terrain == ListeTerrains.MONTAGNE) {
-			this.setDefense(4);
-			this.setMvtInfanterie(2);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(20);
-			this.setMvtChar(20);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Montagne abrupte. L'infanterie gagne 3 points a son champ de vision.");
-			this.setCamouflage(true);
-		} else if (terrain == ListeTerrains.ROUTE) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Une route en bitume. Facile a traverser, mais n'offrant aucune couverture.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.PONT) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Un pont permet aux unites de traverser un fleuve. Pas de bonus.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.RIVIERE) {
-			this.setDefense(0);
-			this.setMvtInfanterie(2);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(20);
-			this.setMvtChar(20);
-			this.setMvtAir(20);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Une riviere au faible courant. Seule l'infanterie peut la traverser.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.PLAGE) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(1);
-			this.setMvtSub(20);
-			this.setDescription("Rivage sablonneux. La Barge permet d'y decharger et charger des unites.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.MER) {
-			this.setDefense(0);
-			this.setMvtInfanterie(20);
-			this.setMvtInfanterieLourde(20);
-			this.setMvtRoues(20);
-			this.setMvtChar(20);
-			this.setMvtAir(1);
-			this.setMvtNavire(1);
-			this.setMvtTransport(1);
-			this.setMvtSub(1);
-			this.setDescription("Une etendue d'eau. Seule une unite aerienne ou maritime peut la traverser.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.RECIF) {
-			this.setDefense(1);
-			this.setMvtInfanterie(20);
-			this.setMvtInfanterieLourde(20);
-			this.setMvtRoues(20);
-			this.setMvtChar(20);
-			this.setMvtAir(1);
-			this.setMvtNavire(2);
-			this.setMvtTransport(2);
-			this.setMvtSub(2);
-			this.setDescription("En brouillard, les unites ne sont vues que par des troupes proches ou volantes.");
-			this.setCamouflage(true);
-		} else if (terrain == ListeTerrains.VILLE) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Les unites au sol sont approvisionnees et soignees dans les villes alliees.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.QG) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Un Q.G. La bataille est finie s'il est capture. Rend des PV aux troupes.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.BASE) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Une base terrestre qui peut creer des unites terrestres et leur rendre des PV.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.PORT) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Une base maritime qui peut creer des unites navales et leur rendre des PV.");
-			this.setCamouflage(false);
-		} else if (terrain == ListeTerrains.AEROPORT) {
-			this.setDefense(0);
-			this.setMvtInfanterie(1);
-			this.setMvtInfanterieLourde(1);
-			this.setMvtRoues(1);
-			this.setMvtChar(1);
-			this.setMvtAir(1);
-			this.setMvtNavire(20);
-			this.setMvtTransport(20);
-			this.setMvtSub(20);
-			this.setDescription("Une base aerienne qui peut creer des unites aeriennes et leur rendre des PV.");
-			this.setCamouflage(false);
+		switch (terrain) {
+		case PLAINE:
+			setDefense(1);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(2);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Plaine verdoyante. Facile a traverser, mais offrant peu de couverture.");
+			setCamouflage(false);
+		case FORET:
+			setDefense(2);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(3);
+			setMvtChar(2);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("En brouillard, les unites ne sont vues que par des troupes proches ou volantes.");
+			setCamouflage(true);
+		case MONTAGNE:
+			setDefense(4);
+			setMvtInfanterie(2);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(20);
+			setMvtChar(20);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Montagne abrupte. L'infanterie gagne 3 points a son champ de vision.");
+			setCamouflage(true);
+		case ROUTE:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Une route en bitume. Facile a traverser, mais n'offrant aucune couverture.");
+			setCamouflage(false);
+		case PONT:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Un pont permet aux unites de traverser un fleuve. Pas de bonus.");
+			setCamouflage(false);
+		case RIVIERE:
+			setDefense(0);
+			setMvtInfanterie(2);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(20);
+			setMvtChar(20);
+			setMvtAir(20);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Une riviere au faible courant. Seule l'infanterie peut la traverser.");
+			setCamouflage(false);
+		case PLAGE:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(1);
+			setMvtSub(20);
+			setDescription("Rivage sablonneux. La Barge permet d'y decharger et charger des unites.");
+			setCamouflage(false);
+		case MER:
+			setDefense(0);
+			setMvtInfanterie(20);
+			setMvtInfanterieLourde(20);
+			setMvtRoues(20);
+			setMvtChar(20);
+			setMvtAir(1);
+			setMvtNavire(1);
+			setMvtTransport(1);
+			setMvtSub(1);
+			setDescription("Une etendue d'eau. Seule une unite aerienne ou maritime peut la traverser.");
+			setCamouflage(false);
+		case RECIF:
+			setDefense(1);
+			setMvtInfanterie(20);
+			setMvtInfanterieLourde(20);
+			setMvtRoues(20);
+			setMvtChar(20);
+			setMvtAir(1);
+			setMvtNavire(2);
+			setMvtTransport(2);
+			setMvtSub(2);
+			setDescription("En brouillard, les unites ne sont vues que par des troupes proches ou volantes.");
+			setCamouflage(true);
+		case VILLE:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Les unites au sol sont approvisionnees et soignees dans les villes alliees.");
+			setCamouflage(false);
+		case QG:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Un Q.G. La bataille est finie s'il est capture. Rend des PV aux troupes.");
+			setCamouflage(false);
+		case BASE:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Une base terrestre qui peut creer des unites terrestres et leur rendre des PV.");
+			setCamouflage(false);
+		case PORT:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Une base maritime qui peut creer des unites navales et leur rendre des PV.");
+			setCamouflage(false);
+		case AEROPORT:
+			setDefense(0);
+			setMvtInfanterie(1);
+			setMvtInfanterieLourde(1);
+			setMvtRoues(1);
+			setMvtChar(1);
+			setMvtAir(1);
+			setMvtNavire(20);
+			setMvtTransport(20);
+			setMvtSub(20);
+			setDescription("Une base aerienne qui peut creer des unites aeriennes et leur rendre des PV.");
+			setCamouflage(false);
+		default:
+			break;
 		}
+
 	}
 
 	public int getDefense() {
 		return defense;
 	}
 
-	private void setDefense(int def) {
-		this.defense = def;
+	private void setDefense(int defense) {
+		this.defense = defense;
 	}
 
 	public int getMvtInfanterie() {
