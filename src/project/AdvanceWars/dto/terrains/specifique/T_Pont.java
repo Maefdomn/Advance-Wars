@@ -1,12 +1,10 @@
 package project.AdvanceWars.dto.terrains.specifique;
 
-import project.AdvanceWars.dto.terrains.Terrain;
-import project.AdvanceWars.enumValues.ListeTerrains;
+import project.AdvanceWars.dto.terrains.TerrainDto;
 
-public class T_Pont extends Terrain {
+public class T_Pont extends TerrainDto {
 
 	public T_Pont() {
-		super(ListeTerrains.PONT);
 	}
 
 	@Override

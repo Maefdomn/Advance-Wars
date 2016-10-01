@@ -1,11 +1,11 @@
 package project.AdvanceWars.services.interfaces;
 
 import project.AdvanceWars.dto.CarteDto;
-import project.AdvanceWars.dto.terrains.Terrain;
+import project.AdvanceWars.dto.terrains.TerrainDto;
 
 public interface IServiceCarte {
 
-	Terrain getTerrain(Integer x, Integer y, CarteDto carte);
+	TerrainDto getTerrain(Integer x, Integer y, CarteDto carte);
 
 	CarteDto createDefaultCarte();
 }

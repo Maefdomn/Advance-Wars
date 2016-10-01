@@ -1,19 +1,19 @@
 package project.AdvanceWars.dto;
 
-import project.AdvanceWars.dto.terrains.Terrain;
+import project.AdvanceWars.dto.terrains.TerrainDto;
 
 public class CarteDto {
 
-	private Terrain[][] terrains;
+	private TerrainDto[][] terrains;
 
 	public CarteDto() {
 	}
 
-	public Terrain[][] getTerrains() {
+	public TerrainDto[][] getTerrains() {
 		return terrains;
 	}
 
-	public void setTerrains(Terrain[][] terrains) {
+	public void setTerrains(TerrainDto[][] terrains) {
 		this.terrains = terrains;
 	}
 

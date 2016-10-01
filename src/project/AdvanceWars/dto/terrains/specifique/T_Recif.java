@@ -1,12 +1,10 @@
 package project.AdvanceWars.dto.terrains.specifique;
 
-import project.AdvanceWars.dto.terrains.Terrain;
-import project.AdvanceWars.enumValues.ListeTerrains;
+import project.AdvanceWars.dto.terrains.TerrainDto;
 
-public class T_Recif extends Terrain {
+public class T_Recif extends TerrainDto {
 
 	public T_Recif() {
-		super(ListeTerrains.RECIF);
 	}
 
 	@Override
