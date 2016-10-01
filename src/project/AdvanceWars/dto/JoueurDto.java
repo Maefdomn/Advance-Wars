@@ -2,9 +2,18 @@ package project.AdvanceWars.dto;
 
 public class JoueurDto {
 
-	private int argent; 
-	
+	private Integer argent;
+
 	public JoueurDto() {
-		this.argent = 0;
+		this.setArgent(0);
 	}
+
+	public Integer getArgent() {
+		return argent;
+	}
+
+	public void setArgent(Integer argent) {
+		this.argent = argent;
+	}
+
 }
