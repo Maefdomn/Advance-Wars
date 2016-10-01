@@ -1,7 +1,5 @@
 package project.AdvanceWars.dto.deplacement;
 
-import project.AdvanceWars.enumValues.TypeDeplacement;
-
 public class TypeDeplacement {
 
 	private TypeDeplacement typeDep;

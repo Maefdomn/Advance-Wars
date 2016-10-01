@@ -2,109 +2,115 @@ package project.AdvanceWars.dto.unites;
 
 import project.AdvanceWars.dto.unites.interfaces.IUnite;
 import project.AdvanceWars.enumValues.TypeDeplacement;
+import project.AdvanceWars.enumValues.TypeUnite;
 
 public class UniteDto implements IUnite {
 
-	private int pv;
-	private int x;
-	private int y;
-	private int deplacement;
-	private int vision;
-	private int essence;
-	private int essenceMax;
-	private int munition;
-	private int munitionMax;
-	private int cout;
-	private int defense;
+	private Integer pv;
+	private Integer x;
+	private Integer y;
+	private Integer deplacement;
+	private Integer vision;
+	private Integer essence;
+	private Integer essenceMax;
+	private Integer munition;
+	private Integer munitionMax;
+	private Integer cout;
+	private Integer defense;
 	private boolean peutCapturer;
 	private String description;
 	private TypeDeplacement typeDeplacements;
+	private TypeUnite typeUnite;
 
-	public int getPv() {
+	public UniteDto() {
+
+	}
+
+	public Integer getPv() {
 		return pv;
 	}
 
-	public void setPv(int pv) {
+	public void setPv(Integer pv) {
 		this.pv = pv;
 	}
 
-	public int getX() {
+	public Integer getX() {
 		return x;
 	}
 
-	public void setX(int x) {
+	public void setX(Integer x) {
 		this.x = x;
 	}
 
-	public int getY() {
+	public Integer getY() {
 		return y;
 	}
 
-	public void setY(int y) {
+	public void setY(Integer y) {
 		this.y = y;
 	}
 
-	public int getDeplacement() {
+	public Integer getDeplacement() {
 		return deplacement;
 	}
 
-	public void setDeplacement(int deplacement) {
+	public void setDeplacement(Integer deplacement) {
 		this.deplacement = deplacement;
 	}
 
-	public int getVision() {
+	public Integer getVision() {
 		return vision;
 	}
 
-	public void setVision(int vision) {
+	public void setVision(Integer vision) {
 		this.vision = vision;
 	}
 
-	public int getEssence() {
+	public Integer getEssence() {
 		return essence;
 	}
 
-	public void setEssence(int essence) {
+	public void setEssence(Integer essence) {
 		this.essence = essence;
 	}
 
-	public int getEssenceMax() {
+	public Integer getEssenceMax() {
 		return essenceMax;
 	}
 
-	public void setEssenceMax(int essenceMax) {
+	public void setEssenceMax(Integer essenceMax) {
 		this.essenceMax = essenceMax;
 	}
 
-	public int getMunition() {
+	public Integer getMunition() {
 		return munition;
 	}
 
-	public void setMunition(int munition) {
+	public void setMunition(Integer munition) {
 		this.munition = munition;
 	}
 
-	public int getMunitionMax() {
+	public Integer getMunitionMax() {
 		return munitionMax;
 	}
 
-	public void setMunitionMax(int munitionMax) {
+	public void setMunitionMax(Integer munitionMax) {
 		this.munitionMax = munitionMax;
 	}
 
-	public int getCout() {
+	public Integer getCout() {
 		return cout;
 	}
 
-	public void setCout(int cout) {
+	public void setCout(Integer cout) {
 		this.cout = cout;
 	}
 
-	public int getDefense() {
+	public Integer getDefense() {
 		return defense;
 	}
 
-	public void setDefense(int defense) {
+	public void setDefense(Integer defense) {
 		this.defense = defense;
 	}
 
@@ -130,5 +136,13 @@ public class UniteDto implements IUnite {
 
 	public void setTypeDeplacements(TypeDeplacement typeDeplacements) {
 		this.typeDeplacements = typeDeplacements;
+	}
+
+	public TypeUnite getTypeUnite() {
+		return typeUnite;
+	}
+
+	public void setTypeUnite(TypeUnite typeUnite) {
+		this.typeUnite = typeUnite;
 	}
 }

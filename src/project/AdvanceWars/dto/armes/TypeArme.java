@@ -1,7 +1,5 @@
 package project.AdvanceWars.dto.armes;
 
-import project.AdvanceWars.enumValues.TypeArme;
-
 public class TypeArme {
 
 	private TypeArme typeArme;
