@@ -1,5 +1,5 @@
 package project.AdvanceWars.enumValues;
 
-public enum ListeDeplacements {
+public enum TypeDeplacement {
 	INF, INFLOURDE, ROUES, CHAR, AIR, NAVIRE, TRANSPORT, SUB;
 }

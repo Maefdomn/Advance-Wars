@@ -1,13 +1,13 @@
 package project.AdvanceWars.services;
 
 import project.AdvanceWars.dto.terrains.TerrainDto;
-import project.AdvanceWars.enumValues.ListeTerrains;
+import project.AdvanceWars.enumValues.TypeTerrain;
 import project.AdvanceWars.services.interfaces.ITerrainService;
 
 public class TerrainService implements ITerrainService {
 
 	@Override
-	public TerrainDto createTerrain(ListeTerrains terrain) {
+	public TerrainDto createTerrain(TypeTerrain terrain) {
 		TerrainDto terrainDto = new TerrainDto();
 		switch (terrain) {
 		case PLAINE:

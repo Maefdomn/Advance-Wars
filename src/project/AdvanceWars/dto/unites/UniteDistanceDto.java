@@ -1,21 +1,21 @@
 package project.AdvanceWars.dto.unites;
 
-import project.AdvanceWars.enumValues.ListeUnites;
+import project.AdvanceWars.enumValues.TypeUnite;
 
 public class UniteDistanceDto extends UniteDto {
 
 	private int porteeMin;
 	private int porteeMax;
 
-	public UniteDistanceDto(int X, int Y, ListeUnites unite) {
+	public UniteDistanceDto(int X, int Y, TypeUnite unite) {
 		super(X, Y, unite);
-		if (unite == ListeUnites.ARTILLERIE) {
+		if (unite == TypeUnite.ARTILLERIE) {
 			this.setPorteeMin(2);
 			this.setPorteeMax(3);
-		} else if (unite == ListeUnites.LMISS || unite == ListeUnites.AAIR) {
+		} else if (unite == TypeUnite.LMISS || unite == TypeUnite.AAIR) {
 			this.setPorteeMin(3);
 			this.setPorteeMax(5);
-		} else if (unite == ListeUnites.DESTROYER) {
+		} else if (unite == TypeUnite.DESTROYER) {
 			this.setPorteeMin(2);
 			this.setPorteeMax(6);
 		}

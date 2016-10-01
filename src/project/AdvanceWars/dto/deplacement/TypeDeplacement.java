@@ -1,19 +1,19 @@
 package project.AdvanceWars.dto.deplacement;
 
-import project.AdvanceWars.enumValues.ListeDeplacements;
+import project.AdvanceWars.enumValues.TypeDeplacement;
 
 public class TypeDeplacement {
 
-	private ListeDeplacements typeDep;
+	private TypeDeplacement typeDep;
 
 	public TypeDeplacement() {
 	}
 
-	public ListeDeplacements getTypeDeplacement() {
+	public TypeDeplacement getTypeDeplacement() {
 		return this.typeDep;
 	}
 
-	public void setTypeDeplacement(ListeDeplacements typeDep) {
+	public void setTypeDeplacement(TypeDeplacement typeDep) {
 		this.typeDep = typeDep;
 	}
 

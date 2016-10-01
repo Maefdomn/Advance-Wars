@@ -1,6 +1,6 @@
 package project.AdvanceWars.dto.terrains;
 
-import project.AdvanceWars.enumValues.ListeTerrains;
+import project.AdvanceWars.enumValues.TypeTerrain;
 
 public class TerrainDto {
 
@@ -15,7 +15,7 @@ public class TerrainDto {
 	private int mvtSub;
 	private String description;
 	private Boolean camouflage;
-	private ListeTerrains typeTerrain;
+	private TypeTerrain typeTerrain;
 
 	public TerrainDto() {
 	}
@@ -163,11 +163,11 @@ public class TerrainDto {
 		return true;
 	}
 
-	public ListeTerrains getTypeTerrain() {
+	public TypeTerrain getTypeTerrain() {
 		return typeTerrain;
 	}
 
-	public void setTypeTerrain(ListeTerrains typeTerrain) {
+	public void setTypeTerrain(TypeTerrain typeTerrain) {
 		this.typeTerrain = typeTerrain;
 	}
 

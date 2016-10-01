@@ -1,20 +1,20 @@
 package project.AdvanceWars.dto.armes;
 
-import project.AdvanceWars.enumValues.ListeArmes;
+import project.AdvanceWars.enumValues.TypeArme;
 
 public class TypeArme {
 
-	private ListeArmes typeArme;
+	private TypeArme typeArme;
 
-	public TypeArme(ListeArmes typeArme) {
+	public TypeArme(TypeArme typeArme) {
 		this.setTypeArme(typeArme);
 	}
 
-	public ListeArmes getTypeArme() {
+	public TypeArme getTypeArme() {
 		return this.typeArme;
 	}
 
-	public void setTypeArme(ListeArmes typeArme) {
+	public void setTypeArme(TypeArme typeArme) {
 		this.typeArme = typeArme;
 	}
 
