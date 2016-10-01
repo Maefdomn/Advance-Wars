@@ -23,7 +23,6 @@ public class UniteDto implements IUnite {
 	private TypeUnite typeUnite;
 
 	public UniteDto() {
-
 	}
 
 	public Integer getPv() {

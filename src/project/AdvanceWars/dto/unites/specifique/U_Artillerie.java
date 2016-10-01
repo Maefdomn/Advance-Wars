@@ -16,8 +16,8 @@ public class U_Artillerie extends UniteDistanceDto {
 		setPeutCapturer(false);
 		setDescription("Les a-air sont essentiels lorsqu'il faut se defendre contre les unites aeriennes.");
 		setTypeDeplacements(TypeDeplacement.ROUES);
-		setPorteeMin(3);
-		setPorteeMax(5);
+		setPorteeMin(2);
+		setPorteeMax(3);
 	}
 
 	@Override
