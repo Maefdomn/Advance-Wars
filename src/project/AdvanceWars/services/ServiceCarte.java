@@ -6,6 +6,7 @@ import project.AdvanceWars.dto.terrains.specifique.T_Foret;
 import project.AdvanceWars.dto.terrains.specifique.T_Mer;
 import project.AdvanceWars.dto.terrains.specifique.T_Montagne;
 import project.AdvanceWars.dto.terrains.specifique.T_Plaine;
+import project.AdvanceWars.persistance.dao.CST;
 import project.AdvanceWars.services.interfaces.IServiceCarte;
 
 public class ServiceCarte implements IServiceCarte {
@@ -29,7 +30,7 @@ public class ServiceCarte implements IServiceCarte {
 	@Override
 	public CarteDto createDefaultCarte() {
 		CarteDto carteDto = new CarteDto();
-		carteDto.setTerrains(new TerrainDto[10][15]);
+		carteDto.setTerrains(new TerrainDto[CST.HAUTEURCARTE][CST.LARGEURCARTE]);
 		for (int i = 0; i < 7; i++) {
 			for (int j = 0; j < 7; j++)
 				carteDto.getTerrains()[i][j] = new T_Plaine();

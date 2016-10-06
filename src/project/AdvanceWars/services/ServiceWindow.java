@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import project.AdvanceWars.controlleurs.MainWindowGame;
 import project.AdvanceWars.dto.CarteDto;
 import project.AdvanceWars.dto.unites.UniteDto;
+import project.AdvanceWars.persistance.dao.CST;
 import project.AdvanceWars.persistance.dao.IMG;
 import project.AdvanceWars.services.interfaces.IServiceWindow;
 
@@ -18,11 +19,13 @@ public class ServiceWindow implements IServiceWindow {
 	public final IMG img = new IMG();
 
 	@Override
-	public void createCasesPanelDefault(CarteDto carte, MainWindowGame mainWindowGame) {
+	public void createCasesPanelDefault(CarteDto carte,
+			MainWindowGame mainWindowGame) {
 		final JPanel cartePanel = new JPanel();
-		final GridLayout gridLayout = new GridLayout(10, 15);
+		final GridLayout gridLayout = new GridLayout(CST.HAUTEURCARTE,
+				CST.LARGEURCARTE);
 		cartePanel.setLayout(gridLayout);
-		final ImageIcon[][] casesImg = new ImageIcon[19][19];
+		final ImageIcon[][] casesImg = new ImageIcon[CST.HAUTEURCARTE][CST.LARGEURCARTE];
 
 		/* Creation de la matrice d'image "casesImg" */
 		// Vert et Violet
@@ -83,6 +86,6 @@ public class ServiceWindow implements IServiceWindow {
 	}
 
 	public void affichageZoneDeplacement(UniteDto unite) {
-		
+
 	}
 }

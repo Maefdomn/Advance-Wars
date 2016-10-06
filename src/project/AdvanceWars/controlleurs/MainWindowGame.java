@@ -6,6 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import project.AdvanceWars.dto.PartieDto;
+import project.AdvanceWars.persistance.dao.CST;
 import project.AdvanceWars.services.ServiceCarte;
 import project.AdvanceWars.services.ServiceJoueur;
 import project.AdvanceWars.services.ServiceWindow;
@@ -36,7 +37,7 @@ public class MainWindowGame extends JFrame {
 		partie.setCarte(serviceCarte.createDefaultCarte());
 
 		setPartie(partie);
-		setCasesButton(new JButton[10][15]);
+		setCasesButton(new JButton[CST.HAUTEURCARTE][CST.LARGEURCARTE]);
 
 		serviceWindow.createCasesPanelDefault(getPartie().getCarte(), this);
 		serviceWindow.createPanelJoueur();

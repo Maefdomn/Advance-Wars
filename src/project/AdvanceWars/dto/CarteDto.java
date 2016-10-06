@@ -1,6 +1,7 @@
 package project.AdvanceWars.dto;
 
 import project.AdvanceWars.dto.terrains.TerrainDto;
+import project.AdvanceWars.persistance.dao.CST;
 
 public class CarteDto {
 
@@ -27,8 +28,8 @@ public class CarteDto {
 
 	public String toString() {
 		String str = "";
-		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 10; j++) {
+		for (int i = 0; i < CST.HAUTEURCARTE; i++) {
+			for (int j = 0; j < CST.LARGEURCARTE; j++) {
 				str = str + " " + this.getTerrains().toString();
 			}
 			str = str + "\n";
